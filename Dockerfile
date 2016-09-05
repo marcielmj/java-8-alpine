@@ -12,7 +12,7 @@ ENV JAVA_FILENAME="java-${JAVA_VERSION}-oracle.tar.gz"
 ENV JAVA_HOME="/opt/java-${JAVA_VERSION}-oracle"
 ENV PATH="${PATH}:/${JAVA_HOME}/bin:.:"
 
-RUN wget --header "Cookie: oraclelicense=accept-securebackup-cookie" -O "/tmp/${JAVA_FILENAME}" "${JDK_DOWNLOAD_URL}" && \
-    tar -xzf "/tmp/${JAVA_FILENAME}" -C "/tmp/" && \
+RUN wget --header "Cookie: oraclelicense=accept-securebackup-cookie" -q -O "/tmp/${JAVA_FILENAME}" "${JDK_DOWNLOAD_URL}" && \
+    tar -xzf "/tmp/${JAVA_FILENAME}" -C "/tmp" && \
     mv "/tmp/jdk1.${JAVA_VERSION}.0_${JAVA_UPDATE}" "${JAVA_HOME}" && \
-    rm -rf "${JAVA_HOME}/"*src.zip /tmp/*
+    rm -rf ${JAVA_HOME}/*src.zip /tmp/*
