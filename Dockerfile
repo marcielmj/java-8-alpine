@@ -3,8 +3,8 @@ FROM marcielmj/alpine
 MAINTAINER marcielmj <https://github.com/marcielmj>
 
 ENV JAVA_VERSION=8
-ENV JAVA_UPDATE=102
-ENV JAVA_BUILD=14
+ENV JAVA_UPDATE=131
+ENV JAVA_BUILD=11
 
 ENV JDK_DOWNLOAD_URL="http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION}u${JAVA_UPDATE}-b${JAVA_BUILD}/jdk-${JAVA_VERSION}u${JAVA_UPDATE}-linux-x64.tar.gz"
 ENV JAVA_FILENAME="java-${JAVA_VERSION}-oracle.tar.gz"
